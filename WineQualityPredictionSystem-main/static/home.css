@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    height: 69px;
+    width: 100vw;
+    
+    background-color:rgb(78, 76, 78);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:right;
+    
+}
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin-top: 20px;
+    
+    
+
+}
+nav ul a{
+    font-size: 20px;
+    padding: 2px;
+    padding-top: 20px;
+    color: white;
+    text-decoration-line: none;
+    
+    margin-right: 40px;
+    
+}
+nav ul a:hover{
+    color: bisque;
+}
+nav img{
+    height: 57px;
+    width: 54px;
+    align-items: left;
+    margin-right: 20px;
+    
+}
+.container1{
+    height:533px;
+    width: 300px;
+    background-color:rgb(78, 76, 78);
+    
+    
+    /* background-image: url('https://images.pexels.com/photos/5775055/pexels-photo-5775055.jpeg?auto=compress&cs=tinysrgb&w=600');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll; */
+    
+    
+    
+}
+/* .container1 img{
+    height: 90px;
+    width: 80px;
+    margin-left: 25px;
+    
+} */
+.container1 h1{
+    text-align: center;
+    font-size: 45px;
+    color: wheat;
+    padding-top: 70px;
+    margin-left: -10px;
+    
+    
+}
+/* .container1 h2{
+    text-align: center;
+    font-size: 40px;
+    padding: 5px;
+    color: blue;
+    margin-top: -30px;
+} */
+
+#predictButton {
+    height: 50px;
+    width: 200px;
+    font-size: 26px;
+    background-color: #eb53ac;
+    color:wheat;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-left:23px;
+    margin-top: 50px;
+    padding-top: 8px;
+    
+}
+
+
+#predictButton:hover {
+    background-color: #0056b3;
+}
+.front{
+    height: 533px;
+    width: 1064px;
+    background-color: #3c3b3c;
+    margin-left: 289px;
+    margin-top: -535px;
+}
+.front img{
+    height:100%;
+    width:1076px;
+}
+    
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+#predictionForm{
+    height: 700px;
+    width: 100vw;
+    background-image: url('https://images.pexels.com/photos/4691211/pexels-photo-4691211.jpeg?auto=compress&cs=tinysrgb&w=600');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    backface-visibility: visible;
+   
+}
+#predictionForm h2{
+    font-size: 30px;
+    text-align:left;
+    color: white;
+    padding-left:420px;
+    
+
+}
+
+#container {
+    max-width: 500px;
+    
+    margin: 20px auto;
+    padding: 50px;
+    /* background-color: #fff; */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+    
+}
+
+#wineForm{
+    height: 470px;
+    display: flex;
+    /* background-color: rgb(250, 249, 249); */
+    flex-wrap: wrap;
+    justify-content:space-between;
+    padding: 1px;
+    margin: 30px;
+    margin-left: 20px;
+    margin-right: 490px;
+    
+    
+
+}
+#wineForm .one{
+    height: 400px;
+    width: 200px;
+    /* background-color:rgb(244, 246, 242); */
+    margin-left: 300px;
+    
+}
+#wineForm .two{
+    height: 400px;
+    width: 200px;
+    /* background-color:rgb(247, 246, 246); */
+    
+    
+    
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color:white;
+    
+}
+
+input[type="number"],
+button {
+    padding: 15px;
+    margin-top: -5px;
+    height: 5px;
+}
+
+button {
+    height: 40px;
+    width: 170px;
+    background-color: #1b426b;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    
+}
+
+button:hover {
+    background-color: #0056b3;
+}

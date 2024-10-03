@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='result.css')}}" /> <!-- Linking CSS file -->
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Wine Quality Prediction Result</h1>
+        <div class="main">
+            <h2>User Input Data</h2>
+            <table>
+                <tr>
+                    <th>Feature Name</th>
+                    <th>Value</th>
+                </tr>
+                {% for key, value in input_data.items() %}
+                {% set feature_name = key|replace('_', ' ')|title %}
+                <!-- Replace underscores with spaces and capitalize the first letter of each word -->
+                <tr>
+                    <td>{{ feature_name }}</td>
+                    <td>{{ value }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+        <h2>Quality of wine is:{{ prediction }}</h2>
+        
+        <div class="second">
+            {% if 'Good' in prediction %}
+
+            <p>With the 75% confidence I can say that this wine is of Export Quality and is of good Taste.!</p>
+            <div class="images-container">
+                <div class="export">
+                    <img src="{{ url_for('static', filename='images/export.jpeg') }}" alt="Export Image">
+                </div>
+                <div class="taste">
+                    <img src="{{ url_for('static', filename='images/taste.webp') }}" alt="Taste Image">
+                </div>
+            </div>
+
+            {% elif 'Bad' in prediction %}
+            <div class="purify">
+                <p>You can increase the Quality of wine by increasing Alcohol, Sulphate and lowering Volatile acidity.</p>
+                <img src="{{ url_for('static', filename='images/purify1.jpg') }}" alt="Purify Image">
+            </div>
+            {% endif %}
+
+        </div>
+
+    </div> <!-- End of .container -->
+</body>
+
+</html>

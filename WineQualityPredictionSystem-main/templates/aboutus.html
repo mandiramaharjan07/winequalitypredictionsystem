@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='home.css')}}">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            height: 580px;
+            width: 100vw;
+            background-color: wheat;
+
+
+        }
+
+        .c1 img {
+            height: 270px;
+            width: 300px;
+            margin-left: 50px;
+            margin-top: 11px;
+            position: fixed;
+        }
+
+        .c2 img {
+            height: 270px;
+            width: 300px;
+            margin-left: 50px;
+            margin-top: 300px;
+            position: fixed;
+        }
+
+        .c3 img {
+            height: 180px;
+            width: 200px;
+            margin-left: 370px;
+            margin-top: 11px;
+            position: fixed;
+
+        }
+
+        .c4 img {
+            height: 180px;
+            width: 200px;
+            margin-left: 370px;
+            margin-top: 200px;
+            position: fixed;
+
+        }
+
+        .c5 img {
+            height: 180px;
+            width: 200px;
+            margin-left: 370px;
+            margin-top: 390px;
+            position: fixed;
+
+        }
+
+        .text {
+            height: 560px;
+            width: 750px;
+            background-color: wheat;
+            margin-left: 600px;
+            margin-top: -570px;
+        }
+
+        .text h2 {
+            text-align: left;
+            font-size: 40px;
+            color: purple;
+        }
+
+        .text p {
+            margin-bottom: 10px;
+            font-size: 20px;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('aboutus') }}">About Us</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+
+
+    </nav>
+
+    <div class="main">
+        <div class="c1">
+            <img src="{{url_for('static',filename='images/img10.jpg')}}" alt="winetest">
+        </div>
+        <div class="c2">
+            <img src="{{url_for('static',filename='images/img6.jpeg')}}" alt="winetest">
+        </div>
+        <div class="c3">
+            <img src="{{url_for('static',filename='images/img2.jpeg')}}" alt="winetest">
+        </div>
+        <div class="c4">
+            <img src="{{url_for('static',filename='images/img4.jpeg')}}" alt="winetest">
+        </div>
+        <div class="c5">
+            <img src="{{url_for('static',filename='images/img5.jpeg')}}" alt="winetest">
+        </div>
+
+
+    </div>
+    <div class="text">
+        <h2>About Us</h2>
+        <p>We predict the Quality of Wine using Machine learning techniques based on given parameters</p>
+
+        <h2>Our Mission</h2>
+        <p>To predict the quality of wine with high accuracy</p>
+
+        <h2>Meet the Team</h2>
+        <p style="margin-top: -30px;"> 
+            <li>Bibisha Dahal</li>
+            <li>Suyash Karki</li>
+            <li>Ishan Upadhayaya</li>
+        </p>
+
+        <h2>Technology and Approach</h2>
+        <p>We used Random Forest Classification Algorithm to predict the quality of wine using machine learning approach
+        </p>
+
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>
