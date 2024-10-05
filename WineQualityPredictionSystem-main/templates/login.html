@@ -1,27 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Login - Wine Quality Prediction System</title>
-    <link rel="stylesheet" href="{{url_for('static',filename='login.css')}}">
+    <!-- <link rel="stylesheet" href="{{url_for('static',filename='login.css')}}"> -->
+    <link rel="stylesheet" href="./../static/login.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
     <div class="login-container">
-        <h1>Login</h1>
-        <form id="loginForm" action="login" method="post">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required><br><br>
-            
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required><br><br>
-            <span>{{msgW}}</span>
-            <button type="submit" value="Login">Login</button>
-        </form>
-        <div id="loginResult"></div>
-        <a href="{{ url_for('register') }}">Not registered yet? Register here</a>
+        <div class="login-form">
+            <h1 class="mb-5 font-bold text-3xl">Login</h1>
+            <form id="loginForm" action="login" method="post">
+                <div>
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <div class="mb-3">
+                    <span>{{msgW}}</span>
+                </div>
+
+                <button type="submit"
+                    class="rounded-full bg-[#57cc99] text-white py-1 px-4 min-w-[120px] mb-3 font-medium">Login</button>
+            </form>
+            <div id="loginResult"></div>
+            <a href="{{ url_for('register') }}" class="text-[#4361ee] font-medium">Not registered yet? Register here</a>
+        </div>
     </div>
-
-    
 </body>
-</html> 
 
+</html>

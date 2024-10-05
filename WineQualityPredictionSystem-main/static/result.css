@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
 /* Reset CSS */
 * {
     margin: 0;
@@ -7,8 +9,20 @@
 
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Quicksand", sans-serif !important;
     background-color: #f2f2f2;
+    overflow-x: hidden;
+}
+
+.result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(./../static/images/pattern.png);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
 }
 
 .container {
@@ -17,7 +31,7 @@ body {
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -43,16 +57,17 @@ table {
     margin-bottom: 20px;
 }
 
-th, td {
+th,
+td {
     padding: 10px;
     border-bottom: 2px solid #ddd;
-    
+
 }
 
 th {
     background-color: #f2f2f2;
-    
-    
+
+
 }
 
 .one {
@@ -71,13 +86,15 @@ th {
     align-items: center;
 }
 
-.export, .taste, .purify {
+.export,
+.taste,
+.purify {
     text-align: center;
 }
 
 img {
     max-width: 750px;
-    height:230px;
+    height: 230px;
     border-radius: 5px;
-    justify-content:space-around;
+    justify-content: space-around;
 }

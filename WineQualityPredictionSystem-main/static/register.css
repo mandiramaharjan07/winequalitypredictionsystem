@@ -1,14 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+body {
+    font-family: "Quicksand", sans-serif !important;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
 /* register.css */
 
 /* Container for the registration form */
 .register-container {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    text-align: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./../static/images/pattern.png);
+    background-size: cover;
+    background-position: top center;
+}
+
+.register-form {
+    min-width: 450px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    background-color: #fff;
+    border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -30,10 +48,10 @@
 #registrationForm input[type="password"] {
     width: calc(100% - 20px);
     padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 5px;
     box-sizing: border-box;
+    width: 100%;
 }
 
 /* Style the register button */
@@ -45,6 +63,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 100%;
 }
 
 #registrationForm button[type="submit"]:hover {
