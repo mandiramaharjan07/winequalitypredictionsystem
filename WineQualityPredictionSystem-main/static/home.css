@@ -201,3 +201,9 @@ input:focus-within {
 .about-us {
     background-color: wheat;
 }
+
+.logout-btn {
+    display: block;
+    width: 100%;
+    padding: 0;
+}
