@@ -1,162 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us</title>
     <!-- <link rel="stylesheet" href="{{url_for('static',filename='home.css')}}"> -->
-    <link rel="stylesheet" href="./../static/home.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./../static/home.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+      }
 
-        body {
-            overflow-x: hidden;
-        }
+      body {
+        overflow-x: hidden;
+      }
 
-        .main {
-            height: 580px;
-            background-color: wheat;
-        }
+      .main {
+        height: 580px;
+        background-color: wheat;
+      }
 
-        .c1 img {
-            height: 270px;
-            width: 300px;
-            margin-left: 50px;
-            margin-top: 11px;
-            position: fixed;
-        }
+      .c1 img {
+        height: 270px;
+        width: 300px;
+        margin-left: 50px;
+        margin-top: 11px;
+        position: fixed;
+      }
 
-        .c2 img {
-            height: 270px;
-            width: 300px;
-            margin-left: 50px;
-            margin-top: 300px;
-            position: fixed;
-        }
+      .c2 img {
+        height: 270px;
+        width: 300px;
+        margin-left: 50px;
+        margin-top: 300px;
+        position: fixed;
+      }
 
-        .c3 img {
-            height: 180px;
-            width: 200px;
-            margin-left: 370px;
-            margin-top: 11px;
-            position: fixed;
+      .c3 img {
+        height: 180px;
+        width: 200px;
+        margin-left: 370px;
+        margin-top: 11px;
+        position: fixed;
+      }
 
-        }
+      .c4 img {
+        height: 180px;
+        width: 200px;
+        margin-left: 370px;
+        margin-top: 200px;
+        position: fixed;
+      }
 
-        .c4 img {
-            height: 180px;
-            width: 200px;
-            margin-left: 370px;
-            margin-top: 200px;
-            position: fixed;
+      .c5 img {
+        height: 180px;
+        width: 200px;
+        margin-left: 370px;
+        margin-top: 390px;
+        position: fixed;
+      }
 
-        }
+      .text {
+        height: 560px;
+        width: 750px;
+        background-color: wheat;
+        margin-left: 600px;
+        margin-top: -570px;
+      }
 
-        .c5 img {
-            height: 180px;
-            width: 200px;
-            margin-left: 370px;
-            margin-top: 390px;
-            position: fixed;
+      .text h2 {
+        text-align: left;
+        font-size: 40px;
+        color: purple;
+      }
 
-        }
+      .text p {
+        margin-bottom: 10px;
+        font-size: 20px;
+        padding-bottom: 20px;
+      }
 
-        .text {
-            height: 560px;
-            width: 750px;
-            background-color: wheat;
-            margin-left: 600px;
-            margin-top: -570px;
-        }
-
-        .text h2 {
-            text-align: left;
-            font-size: 40px;
-            color: purple;
-        }
-
-        .text p {
-            margin-bottom: 10px;
-            font-size: 20px;
-            padding-bottom: 20px;
-        }
-
-        nav ul li a {
-            color: #434343;
-        }
+      nav ul li a {
+        color: #434343;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <nav>
-        <img src="./../static/images/wine.gif" alt="wine" />
-        <ul>
-            <li><a href="{{ url_for('home') }}">Home</a></li>
-            <li><a href="{{ url_for('aboutus') }}">About Us</a></li>
-            <li><a href="{{ url_for('contact') }}">Contact</a></li>
-        </ul>
-        <a href="./login.html" class="login-btn">
-            Login
-        </a>
+      <img src="./../static/images/wine.gif" alt="wine" />
+      <ul>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('aboutus') }}">About Us</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+      </ul>
+      <a href="./login.html" class="login-btn"> Login </a>
     </nav>
 
     <section class="about-us py-[150px]">
-        <div class="container">
-            <div class="main">
-                <div class="c1">
-                    <!-- <img src="{{url_for('static',filename='images/img10.jpg')}}" alt="winetest"> -->
-                    <img src="./../static/images/img10.jpg" alt="winetest" class="object-fit-cover rounded-md">
-                </div>
-                <div class="c2">
-                    <!-- <img src="{{url_for('static',filename='images/img6.jpeg')}}" alt="winetest"> -->
-                    <img src="./../static/images/img6.jpeg" alt="winetest" class="object-fit-cover rounded-md">
-                </div>
-                <div class="c3">
-                    <!-- <img src="{{url_for('static',filename='images/img2.jpeg')}}" alt="winetest"> -->
-                    <img src="./../static/images/img2.jpeg" alt="winetest" class="object-fit-cover rounded-md">
-                </div>
-                <div class="c4">
-                    <!-- <img src="{{url_for('static',filename='images/img4.jpeg')}}" alt="winetest"> -->
-                    <img src="./../static/images/img4.jpeg" alt="winetest" class="object-fit-cover rounded-md">
-                </div>
-                <div class="c5">
-                    <!-- <img src="{{url_for('static',filename='images/img5.jpeg')}}" alt="winetest"> -->
-                    <img src="./../static/images/img5.jpeg" alt="winetest" class="object-fit-cover rounded-md">
-                </div>
-
-
-            </div>
-            <div class="text">
-                <h2>About Us</h2>
-                <p>We predict the Quality of Wine using Machine learning techniques based on given parameters</p>
-
-                <h2>Our Mission</h2>
-                <p>To predict the quality of wine with high accuracy</p>
-
-                <h2>Meet the Team</h2>
-                <p style="margin-top: -30px;">
-                    <li>Bibisha Dahal</li>
-                    <li>Suyash Karki</li>
-                    <li>Ishan Upadhayaya</li>
-                </p>
-
-                <h2>Technology and Approach</h2>
-                <p>We used Random Forest Classification Algorithm to predict the quality of wine using machine learning
-                    approach
-                </p>
-            </div>
+      <div class="container">
+        <div class="main">
+          <div class="c1">
+            <!-- <img src="{{url_for('static',filename='images/img10.jpg')}}" alt="winetest"> -->
+            <img
+              src="./../static/images/img10.jpg"
+              alt="winetest"
+              class="object-fit-cover rounded-md"
+            />
+          </div>
+          <div class="c2">
+            <!-- <img src="{{url_for('static',filename='images/img6.jpeg')}}" alt="winetest"> -->
+            <img
+              src="./../static/images/img6.jpeg"
+              alt="winetest"
+              class="object-fit-cover rounded-md"
+            />
+          </div>
+          <div class="c3">
+            <!-- <img src="{{url_for('static',filename='images/img2.jpeg')}}" alt="winetest"> -->
+            <img
+              src="./../static/images/img2.jpeg"
+              alt="winetest"
+              class="object-fit-cover rounded-md"
+            />
+          </div>
+          <div class="c4">
+            <!-- <img src="{{url_for('static',filename='images/img4.jpeg')}}" alt="winetest"> -->
+            <img
+              src="./../static/images/img4.jpeg"
+              alt="winetest"
+              class="object-fit-cover rounded-md"
+            />
+          </div>
+          <div class="c5">
+            <!-- <img src="{{url_for('static',filename='images/img5.jpeg')}}" alt="winetest"> -->
+            <img
+              src="./../static/images/img5.jpeg"
+              alt="winetest"
+              class="object-fit-cover rounded-md"
+            />
+          </div>
         </div>
-    </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-</body>
+        <div class="text">
+          <h2>About Us</h2>
+          <p>
+            We predict the Quality of Wine using Machine learning techniques
+            based on given parameters
+          </p>
 
+          <h2>Our Mission</h2>
+          <p>To predict the quality of wine with high accuracy</p>
+
+          <h2>Meet the Team</h2>
+          <p style="margin-top: -30px">
+            <li>Mandira Maharjan</li>
+            <li>Lalita Shrestha</li>
+          </p>
+
+          <h2>Technology and Approach</h2>
+          <p>
+            We used Random Forest Classification Algorithm to predict the
+            quality of wine using machine learning approach
+          </p>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

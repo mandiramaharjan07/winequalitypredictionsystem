@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, session, url_for,jsonify
+from flask import Flask, render_template, request, redirect, session, url_for, jsonify, flash
 import mysql.connector
 import joblib
 from joblib import load
@@ -55,8 +55,18 @@ def index():
 
 @app.route("/home")
 def home():
-    return render_template('home.html', username=session.get('username'))
+    if 'user_id' in session:
+        user_id = session['user_id']
+        
+        # Correct MySQL connection usage for mysql.connector
+        cursor.execute("SELECT * FROM users WHERE userid=%s", (user_id,))
+        user = cursor.fetchone()
 
+        if user:
+            return render_template('home.html', user=user)
+        return redirect(url_for('login'))
+    
+    return redirect(url_for('login'))
 @app.route('/aboutus')
 def aboutus():
     return render_template('aboutus.html')
@@ -75,6 +85,7 @@ def login():
         record = cursor.fetchone()
         if record:
             session['loggedin'] = True
+            session['user_id']= record[0]
             session['username'] = record[1]
             return redirect(url_for('home'))
         else:
@@ -106,8 +117,11 @@ def predict():
         return jsonify({'error': "Prediction failed"})
 
     
-
-
+@app.route('/logout')
+def logout():
+    session.pop('user_id',None)
+    flash("You have been logged out successfully.")
+    return redirect(url_for('login'))
 
 @app.route('/result')
 def result():
